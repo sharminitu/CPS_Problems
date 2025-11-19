@@ -8,21 +8,28 @@ using namespace std;
 
 void ans()
 {
-    int n,m;
-    cin >> n>>m;
-
-    for(int i=0;i<n;i++){
-        if(i<m){
-            cout<<"OK"<<endl;
-        }
-        else{
-            cout << "Too Many Requests"<<endl;
-        }
+    map<char, int> mp;
+    char c;
+    bool f = 0;
+    for (int i = 0; i < 4; i++)
+    {
+        cin >> c;
+        mp[c]++;
     }
 
+    if (mp.size() == 2)
+    {
+        cout << "Yes" << endl;
+    }
+    else
+    {
+        cout << "No" << endl;
+    }
 }
 int main()
 {
     optimize();
-        ans();
+    ans();
+
+    return 0;
 }
